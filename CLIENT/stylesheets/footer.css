@@ -1,0 +1,6 @@
+.site-footer {
+  background-color: gray;
+  display: flex;
+  flex-direction: row;
+  order: 3;
+}

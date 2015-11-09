@@ -1,0 +1,129 @@
+@import "typography.less";
+
+*, *:before, *:after
+{
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+html, body
+{
+    width: 100%;
+    height: 100%;
+
+    margin: 0;
+    padding: 0;
+}
+
+// body
+// {
+//     background: #444444;
+//
+//     color: #cccccc;
+//     font-size: 14px;
+//     /* Helvetica/Arial-based sans serif stack */
+//     font-family: Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
+//
+// }
+
+.flexbox-parent-vert-top
+{
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;  //children will be vertical
+
+    justify-content: flex-start; /* align items from top)*/
+    align-items: stretch; /* align items horizontally */
+    align-content: stretch; /* Extra space horizontally */
+
+    // background: rgba(255, 255, 255, .1);
+
+}
+
+.flexbox-parent-vert-center
+{
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;  //children will be vertical
+    justify-content: center; // align items centered vertically
+    align-items: stretch; /* children stretched horizontally */
+    align-content: stretch; /* Extra space in horizontal */
+
+    // background: rgba(255, 255, 255, .1);
+
+}
+
+.flexbox-parent-horiz-left
+{
+    display: flex;
+    flex-direction: row;  //children will aligned horizontally
+    justify-content: flex-start; // horizontally from left
+    align-items: center; // stretch vertically */
+    align-content: stretch; /* Extra space vertically */
+		border: 1px solid black;
+}
+
+.flexbox-parent-horiz-center
+{
+    display: flex;
+    flex-direction: row;  //children aligned horizontally
+    justify-content: center; // children centered horizontally
+    align-items: stretch; // children stretched vertically
+    align-content: stretch; // Extra space in vertical
+}
+
+
+.flexbox-item
+{
+    // padding: 8px;
+}
+
+.flexbox-item-grow
+{
+    flex: 1; /* same as flex: 1 1 auto; */
+}
+
+
+
+
+
+.fill-from-center
+{
+    display: flex;  //also a parent
+    flex-direction: column;  //children aligned vertically
+    justify-content: center; //children aligned vertically centered
+    align-items: center;  //horizontally centered
+		flex: 1;
+    // background: rgba(0, 0, 0, .3);
+    border: 1px solid #000000;
+		border-radius: 5px;
+    padding: 1em;
+    // margin: 1em;
+
+
+    /* Needed for when the area gets squished too far and there is content that can't be displayed */
+    overflow: auto;
+}
+
+.fill-from-left
+{
+    display: flex;  //also a parent
+    flex-direction: column;  //children aligned vertically
+    justify-content: center; //children aligned vertically centered
+    align-items: left;  //horizontally from left
+		flex: 1;
+    // background: rgba(0, 0, 0, .3);
+    border: 1px solid #000000;
+		border-radius: 5px;
+    padding: 1em;
+    // margin: 1em;
+
+
+    /* Needed for when the area gets squished too far and there is content that can't be displayed */
+    overflow: auto;
+}
